@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,600,700&display=swap");
+@mixin font-header-xxl {
+  font-size: 4.8rem;
+  line-height: 6.5rem;
+  font-weight: bold;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+@mixin font-header-xl {
+  font-size: 3.4rem;
+  line-height: 4.6rem;
+  font-weight: bold;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+@mixin font-header-l {
+  font-size: 2.4rem;
+  line-height: 3.2rem;
+  font-weight: bold;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+@mixin font-header-m {
+  font-size: 2rem;
+  line-height: 2.7rem;
+  font-weight: bold;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+@mixin font-header-s {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: normal;
+  font-family: "Open Sans Condensed", sans-serif;
+}
+@mixin font-paragraph-l {
+  font-size: 1.8rem;
+  line-height: 2.8rem;
+  font-weight: normal;
+}
+@mixin font-paragraph-m {
+  font-size: 1.4rem;
+  line-height: 2rem;
+  font-weight: normal;
+}
+@mixin font-paragraph-s {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  font-weight: normal;
+}
+@mixin font-paragraph-xs {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: normal;
+}

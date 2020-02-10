@@ -1,0 +1,19 @@
+html {
+  font-size: 10px;
+  font-family: "Open Sans", sans-serif;
+}
+body {
+  margin: 0;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+a {
+  text-decoration: none !important;
+}
+a:hover {
+  text-decoration: none !important;
+}

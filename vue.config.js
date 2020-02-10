@@ -1,14 +1,14 @@
 // vue.config.js
 module.exports = {
-  // options...
-
+  // options... css: {
   css: {
     loaderOptions: {
-      sass: {
-        data: `
-          @import "@/scss/variables.scss";
-          @import "@/scss/mixins.scss";
-        `
+      scss: {
+        prependData: `
+        @import "~@/styles/variables.scss"; 
+        @import "~@/styles/responsiveness.scss"; 
+        @import "~@/styles/fonts.scss";
+        @import "~@/styles/globals.scss";`
       }
     }
   }
