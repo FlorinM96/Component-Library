@@ -1,33 +1,42 @@
 export const categories = [
   {
-    name: "Buttons",
-    values: [
+    name: "Elements",
+    children: [
       {
-        name: "US Air Force Rectangle Button",
-        componentName: "AirForceRectangle"
+        name: "Buttons",
+        values: [
+          {
+            id: "AirForceRectangle",
+            name: "US AirForce Rectangle",
+            componentName: "AirForceRectangle"
+          },
+          {
+            id: "AirForceCircle",
+            name: "US AirForce Circle",
+            componentName: "air-force-circle"
+          },
+          {
+            id: "EtsFactoryButton",
+            name: "ETS Factory Button",
+            componentName: "ets-factory-button"
+          }
+        ]
       },
       {
-        name: "US Air Force Round Button",
-        componentName: "AirForceCircle"
-      }
-    ]
-  },
-  {
-    name: "PopUps",
-    values: [
-      {
-        name: "US Air Force Rectangle Button",
-        componentName: "AirForceRectangle"
-      },
-      {
-        name: "US Air Force Round Button",
-        componentName: "AirForceCircle"
+        name: "Text Boxes",
+        values: [
+          {
+            id: "AirForceBorderOutline",
+            name: "US AirForce Border Outline",
+            componentName: "AirForceBorderOutline"
+          },
+          {
+            id: "AirForceExpandingColumns",
+            name: "US AirForce Expanding Columns",
+            componentName: "AirForceExpandingColumns"
+          }
+        ]
       }
     ]
   }
 ];
-
-// {
-//   name: "",
-//   componentName: ""
-// }

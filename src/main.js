@@ -5,6 +5,10 @@ import store from "./store";
 
 Vue.config.productionTip = false;
 
+require("./components/Elements");
+require("./components/_globals");
+require("./assets/icons");
+
 new Vue({
   router,
   store,

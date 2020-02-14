@@ -18,30 +18,7 @@
       ></circle>
     </svg>
     <span class="text">
-      <svg
-        width="48"
-        height="48"
-        viewBox="0 0 48 48"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M29.1 29.6001L33 23.8L29.1 18"
-          stroke="#666666"
-          stroke-width="2.5"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-        <path
-          d="M15 24H32.3"
-          stroke="#666666"
-          stroke-width="2.5"
-          stroke-miterlimit="10"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
+      <app-icon icon="instagram" />
     </span>
   </div>
 </template>
@@ -57,10 +34,30 @@ export default {};
   background: 0 0;
   padding: 0;
   z-index: 0;
-  margin-top: 100px;
   display: block;
-  height: 4rem;
-  width: 4rem;
+  height: 3.4rem;
+  width: 3.4rem;
+  &:before {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0;
+    -ms-transform: scale(0.25);
+    transform: scale(0.25);
+    background: currentColor;
+    transition: transform 0.8s cubic-bezier(0.19, 1, 0.22, 1),
+      opacity 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  &:hover {
+    .circle {
+      stroke-dashoffset: 64;
+    }
+    cursor: pointer;
+  }
 }
 .circle-svg {
   height: 100%;
@@ -69,18 +66,18 @@ export default {};
   top: 0;
   left: 0;
   position: absolute;
+  overflow: hidden;
 }
 .button-icon-outline .circle {
-  stroke-dasharray: 80 15;
-  stroke-dashoffset: 26;
-  stroke-width: 2px;
+  stroke: currentColor;
+  stroke-dasharray: 42.2 10;
+  stroke-dashoffset: 8;
+  stroke-width: 1.2;
   transition: all 0.8s cubic-bezier(0.19, 1, 0.22, 1);
 }
-.button-circle:hover .circle {
-  stroke-dashoffset: 111;
-}
 .text {
-  @include font-paragraph-s;
+  height: 50%;
+  width: 50%;
   position: absolute;
   top: 50%;
   left: 50%;

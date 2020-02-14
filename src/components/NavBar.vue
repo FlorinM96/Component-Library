@@ -1,25 +1,24 @@
 <template>
-  <div>
-    <div class="nav">
-      <router-link to="/" class="title-container">
-        <img src="@/assets/icons/logo.png" alt="logo" class="logo" />
-        <h3 class="title">Florin's Library</h3>
-      </router-link>
-      <div class="links">
-        <router-link
-          v-for="(page, i) in pages"
-          :to="{ name: modifiedPath(page) }"
-          :key="i"
-          class="link"
-          >{{ page }}</router-link
-        >
-      </div>
+  <div class="nav">
+    <router-link to="/" class="title-container">
+      <img src="@/assets/images/logo.png" alt="logo" class="logo" />
+      <h3 class="title">Florins Library</h3>
+    </router-link>
+    <div class="links">
+      <router-link
+        v-for="(page, i) in pages"
+        :to="{ name: page }"
+        :key="i"
+        class="link"
+        @click.native="changeActiveCategory(page)"
+        >{{ page }}</router-link
+      >
     </div>
-    <div class="side-bar"></div>
   </div>
 </template>
 
 <script>
+import { mapMutations } from "vuex";
 export default {
   props: {
     pages: {
@@ -28,26 +27,25 @@ export default {
     }
   },
   methods: {
-    modifiedPath(page) {
-      return page.replace(/ +/g, "").toLowerCase();
-    }
-  },
-  mounted() {
-    console.log(this.pages);
+    ...mapMutations(["changeActiveCategory"])
   }
 };
 </script>
 
 <style lang="scss" scoped>
 .nav {
-  padding: 0 1rem;
-  background-color: $color-gray-5;
+  position: fixed;
+  padding: 1.1rem 2.4rem;
+  line-height: 3.5rem;
+  height: 5.7rem;
+  top: 0;
+  width: 100%;
   display: flex;
   justify-content: space-between;
   border-bottom: 0.05rem solid $color-gray-4;
+  background-color: $color-white;
 }
 .title-container {
-  height: 4rem;
   display: flex;
   border: 0 !important;
 }
@@ -57,13 +55,12 @@ export default {
   padding: 0 1rem;
 }
 h3 {
-  @include font-paragraph-s;
+  @include font-paragraph-l;
+  line-height: 3.5rem;
   color: $color-gray-2;
-  line-height: 4rem;
 }
 .link {
-  @include font-paragraph-xs;
-  line-height: 4rem;
+  @include font-paragraph-m;
   padding: 0.2rem 0;
   margin: 0 1rem;
   color: $color-gray-2;

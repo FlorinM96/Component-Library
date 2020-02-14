@@ -1,27 +1,20 @@
 <template>
   <div id="app">
-    <nav-bar :pages="categoryNames" />
-    <side-bar :elements="categories[0]" />
     <router-view />
+    <nav-bar :pages="categories.map(e => e.name)" />
   </div>
 </template>
 
 <script>
 import { categories } from "@/logic/categories";
 import NavBar from "@/components/NavBar";
-import SideBar from "@/components/SideBar";
-
 export default {
   components: {
-    SideBar,
     NavBar
   },
-  computed: {
-    categories: () => categories,
-    categoryNames() {
-      return this.categories.map(e => e.name);
-    }
-  }
+  data: () => ({
+    categories: categories
+  })
 };
 </script>
 
