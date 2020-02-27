@@ -13,7 +13,7 @@ export default {};
 
 <style lang="scss" scoped>
 h1 {
-  @include font-header-s;
+  @include font-header-m;
   text-align: center;
   margin-top: 20%;
 }

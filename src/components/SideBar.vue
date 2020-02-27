@@ -54,12 +54,12 @@ export default {
 
 <style lang="scss" scoped>
 .title {
-  @include font-header-m;
+  @include font-header-l;
   padding-left: 2rem;
 }
 .children-name {
-  @include font-paragraph-m;
-  padding-left: 2.5rem;
+  @include font-header-m;
+  padding: 1rem 2.5rem 0;
   &:hover {
     cursor: pointer;
   }

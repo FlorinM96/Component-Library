@@ -37,7 +37,7 @@ export default {
       },
       {
         imageSrc:
-          "https://lh3.googleusercontent.com/proxy/jAihI2bGFwGw6xNEuLiwincgrBEEvDzMkh8bhnDcIDbxWUW080Jbj-s8g4vOkNoj1Zt-oDK_Z6yOz39iNPx8-pYekrsZhzyX8xUfLX5UNQfHjHRpJ3VeKEC93QyrFJJTHA"
+          "https://i.pinimg.com/originals/dd/59/4e/dd594e241abf617abed2b7d586c19ef9.jpg"
       }
     ],
     isActive: null
